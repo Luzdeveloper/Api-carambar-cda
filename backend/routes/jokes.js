@@ -115,7 +115,7 @@ router.get("/", async (req, res) => {
  *         description: La blague n'a pas été trouvée
  */
 
-router.get("/:id", async (req, res) => {
+router.get("/{id}", async (req, res) => {
   try {
     const joke = await Joke.findByPk(req.params.id);
     if (joke) {
