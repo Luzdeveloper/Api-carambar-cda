@@ -1,4 +1,6 @@
 const Joke = require('../models/joke');
+const { validationResult } = require('express-validator');
+const sequelize = require('sequelize');
 
 
 exports.addJoke = async (req, res) => {
