@@ -3,6 +3,7 @@ const app = express();
 const sequelize = require("./models")
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
+const port = 3000;
 
 //midlleware
 
@@ -35,6 +36,6 @@ sequelize
   .sync()
   .then(() => {
     console.log("Base de donnée connectée!");
-    app.listen(3000, () => console.log("Serveur démarré sur le port 3000"));
+    app.listen(port, () => console.log("Serveur démarré sur le port 3000"));
   })
   .catch((err) => console.log("Erreur de connexion à la base de données :", err));
