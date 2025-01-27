@@ -20,7 +20,7 @@ const swaggerOptions = {
       description:"API pour les blagues de Carambar",
     },
   },
-  apis: ["./routes/jokeRoutes.js"],
+  apis: ["./routes/*.js"],
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
