@@ -4,11 +4,11 @@ const sequelize = require("./models")
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
 const port = 3000;
-
+const cors = require('cors');
 //midlleware
 
 app.use(express.json());
-
+app.use(cors());
 // Configuration de Swagger
 
 const swaggerOptions = {
